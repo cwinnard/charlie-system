@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
 // Routers
 app.use('/users', usersRouter);
 
-app.listen(port, () => {
+// Run app
+app.listen(process.env.PORT || port, () => {
 	console.log(`Running on port ${port}`);
 });
 
