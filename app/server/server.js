@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 
-const { usersRouter } = require('./routers/usersRouter');
+const { inquiryRouter } = require('./routers/inquiryRouter');
 
 // Create app
 const app = express();
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 // Routers
-app.use('/users', usersRouter);
+app.use('/users', inquiryRouter);
 
 // Run app
 app.listen(process.env.PORT || port, () => {
