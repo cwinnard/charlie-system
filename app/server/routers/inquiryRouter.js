@@ -14,6 +14,8 @@ inquiryRouter.post('/new', (req, res) => {
     });
     inq.save().then((savedInq) => {
         res.send(savedInq).status(200);
+    }, (e) => {
+        res.send(e).status(500);
     });
 });
 
