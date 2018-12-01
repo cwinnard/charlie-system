@@ -4,12 +4,12 @@ const { Inquiry } = require('./../../database/models/inquiry');
 
 const inquiryRouter = express.Router();
 
-inquiryRouter.get('/new', (req, res) => {
+inquiryRouter.post('/new', (req, res) => {
     const inq = new Inquiry({
-        email: 'tester@gmail.com',
-        businessType: 'fitness app',
-        businessDescription: null,
-        request: 'this is the thing that I would really like done.',
+        email: req.body.email,
+        businessType: req.body.businessType,
+        businessDescription: req.body.businessDescription,
+        request: req.body.request,
     });
     inq.save().then((savedInq) => {
         res.send(savedInq).status(200);
