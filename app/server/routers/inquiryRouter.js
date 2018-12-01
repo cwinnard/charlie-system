@@ -5,6 +5,7 @@ const { Inquiry } = require('./../../database/models/inquiry');
 const inquiryRouter = express.Router();
 
 inquiryRouter.post('/new', (req, res) => {
+    console.log(req);
     const inq = new Inquiry({
         email: req.body.email,
         businessType: req.body.businessType,
