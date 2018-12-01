@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 // Routers
-app.use('/users', inquiryRouter);
+app.use('/inquiry', inquiryRouter);
 
 // Run app
 app.listen(process.env.PORT || port, () => {
