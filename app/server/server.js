@@ -9,6 +9,7 @@ const port = 3000;
 
 // Configure app
 app.use(bodyParser.json({ limit: '1000kb' }));
+app.use(bodyParser.urlEncoded({ extended: true }));
 
 // Connect to database
 require('../database/connect');
