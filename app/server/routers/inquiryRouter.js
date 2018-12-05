@@ -11,8 +11,8 @@ inquiryRouter.post('/new', (req, res) => {
         businessDescription: req.body.businessDescription,
         request: req.body.request,
     });
-    inq.save().then((savedInq) => {
-        res.send(savedInq).status(200);
+    inq.save().then(() => {
+        res.sendStatus(200);
     }, (e) => {
         res.send(e).status(500);
     });
