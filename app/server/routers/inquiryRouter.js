@@ -6,6 +6,7 @@ const inquiryRouter = express.Router();
 
 inquiryRouter.post('/new', (req, res) => {
     const inq = new Inquiry({
+        username: req.body.username,
         email: req.body.email,
         businessType: req.body.businessType,
         businessDescription: req.body.businessDescription,
