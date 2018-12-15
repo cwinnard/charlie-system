@@ -13,7 +13,7 @@ userRouter.post('/new', (req, res) => {
         token,
     });
     user.save().then(() => {
-        res.sendStatus(200);
+        res.sendStatus(200).header('x-auth', user.token);
     }, (e) => {
         res.send(e).status(500);
     });

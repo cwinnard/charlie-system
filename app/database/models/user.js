@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const { pages } = require('../../server/helpers/pageVisitsHelper');
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -12,7 +14,7 @@ const userSchema = new mongoose.Schema({
     pagesVisited: {
         type: [String],
         required: false,
-        default: [],
+        default: [pages.LANDING, pages.DASHBOARD],
     },
 });
 
