@@ -11,18 +11,28 @@ const adjectives = [
     'Gigantic',
     'Mini',
     'Loud',
+    'Hairy',
+    'Cozy',
+    'Comfy',
+    'Slippery',
 ];
+
 const nouns = [
     'Bulldog',
     'Racecar',
     'Cocktail',
     'Statue',
     'Pumpkin',
-    'Evergreen',
+    'Burrito',
     'Mountain',
     'Lion',
     'Football',
     'Hat',
+    'Berry',
+    'Flag',
+    'Planet',
+    'Squirrel',
+    'Candle',
 ];
 
 const generateJWT = () => {
