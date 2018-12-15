@@ -33,8 +33,8 @@ const generateJWT = () => {
 const generateUsername = () => {
     const adj = _.sample(adjectives);
     const noun = _.sample(nouns);
-    const num = Math.random().toFixed(2) * 100;
-    return adj + noun + num;
+    const num = Math.random() * 100;
+    return adj + noun + num.toFixed(2);
 };
 
 module.exports = { generateJWT, generateUsername };
