@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 
 const { inquiryRouter } = require('./routers/inquiryRouter');
+const { userRouter } = require('./routers/userRouter');
 
 // Create app
 const app = express();
@@ -26,6 +27,7 @@ app.get('/', (req, res) => {
 
 // Routers
 app.use('/inquiry', inquiryRouter);
+app.use('/user', userRouter);
 
 // Run app
 app.listen(process.env.PORT || port, () => {
